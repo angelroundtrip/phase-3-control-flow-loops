@@ -1,6 +1,11 @@
-def happy_new_year
-  # your code here
+def happy_new_year num = 10
+  while num >= 1
+    puts "#{num}"
+    num -= 1
+  end
+    puts "Happy New Year!"
 end
+
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
 def fizzbuzz(num)
@@ -15,10 +20,27 @@ def fizzbuzz(num)
   end
 end
 
+
 def fizzbuzz_printer
-  # your code here
+  (1..100).each do |num|
+    puts fizzbuzz(num)
+  end
+end
+require 'pry'
+#this is the issue
+def reverse_string('hello')
+  strings = "hello".split
+  reversed_strings = []
+
+  strings.each do |string|
+    reversed_strings << string.reverse
+  end
+
+  reversed_letters.join(" ")
 end
 
-def reverse_string(str)
-  # your code here
-end
+
+#! works, but not what the test is asking for
+# def reverse_string string = "hello"
+#   string.reverse
+# end
